@@ -16,7 +16,7 @@ const Header = () => {
                     </>
                     :
                     <>
-                        <p className="text-center text-sm">Welcome to <Link to={'/register'} className="hover:underline font-bold">Chiji's Learning Language Flashcards</Link></p>
+                        <p className="text-center text-sm">Welcome to <Link to={'/login'} className="hover:underline font-bold">Chiji's Learning Language Flashcards</Link></p>
                         {/* <Link className='text-sm text-blue-600 underline' to={'/login'}>Login</Link>
                         <Link className='text-sm text-blue-600 underline' to={'/register'}>Register New Account</Link> */}
                     </>
