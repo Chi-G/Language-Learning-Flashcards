@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+body {
+  background-color: #C8D0D2;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 100%;
+  margin: 8rem auto;
+  padding: 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make sure it spans the full width */
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  background-color: #C8D0D2;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem; /* Less padding for mobile */
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    margin: 12rem auto; /* Adjust margin for mobile */
+    padding: 0 0.5rem; /* Reduce padding for mobile */
+  }
+
+  /* Additional adjustments for mobile */
+  .container h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  /* Adjust flashcards if needed */
+  .flashcard {
+    width: 100%; /* Make flashcards full width */
+    margin: 0.5rem 0; /* Reduce margin between cards */
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: .25rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.card .front, .card .back {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
   }
 }
