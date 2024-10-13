@@ -1,9 +1,10 @@
 # Learning Language Flashcards
 
-![Project Logo](./logo.png)
-![Screenshot 1](./screenshot1.png)
-![Screenshot 2](./screenshot2.png)
-![Screenshot 3](./screenshot3.png)
+![login](./login.png)
+![register](./register.png)
+![home](./home.png)
+![unanswered-card-decks](./unanswered-card-decks.png)
+![answered-card-decks](./answered-card-decks.png)
 
 <!-- Project Description -->
 A React-based web application designed to help users learn new languages using interactive flashcards. The application enables users to create, study, and share flashcard decks to aid language learning.
